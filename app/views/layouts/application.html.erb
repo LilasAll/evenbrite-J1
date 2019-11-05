@@ -56,8 +56,8 @@
             Mon profil
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" <%= link_to "Mon profil", event_index_path%></a>
-            <a class="dropdown-item" <%= link_to "Se déconnecter", destroy_user_session_path, :method => :delete %></a>
+            <a class="dropdown-item" <%= link_to "Mon profil", edit_user_registration_path%></a>
+            <a class="dropdown-item" <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %></a>
           </div>
         </li>
       </ul>
@@ -69,4 +69,7 @@
   <body>
     <%= yield %>
   </body>
+
+    <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+    
 </html>
