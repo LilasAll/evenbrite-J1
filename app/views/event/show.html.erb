@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-header">
+    <div class="font-weight-bold text-center"><h1>EVENEMENT : <%=@event.title%></h1></div>
+  </div>
+
+  <div class="card-body">
+    <h5><strong>Date de l'événement : </strong><%= @event.start_date %><br/>
+    <strong>Description : </strong><%= @event.description %><br/>
+    <strong>Administateur : </strong><%= @event.admin.first_name %><br/>
+    <strong>Prix en € : </strong> <%= @event.price %><br/>
+    <strong>Durée en min : </strong><%=  @event.duration %><br/><h5>
+    <br/>
+    <strong>Contacter l'administrateur : </strong><%= @event.admin.email %><br/>
+  </div>
+
+</div>

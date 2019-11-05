@@ -5,26 +5,30 @@
     <div style="";color: white;" >
       <%= label_tag 'Titre de ton Event : ' %>
       <%= text_field_tag 'title'%>
-      <br /> 
+      <br/> 
+
       <%= label_tag 'Description' %>
       <%= text_field_tag 'description'%>
-      <br /> 
+      <br/>
     
-        <%= label_tag 'Prix (en €) :' %>
+      <%= label_tag 'Prix (en €) :' %>
       <%= text_field_tag 'price'%>
-      <br /> 
-        <%= label_tag 'Quand ? ' %>
+      <br/>
+      
+      <%= label_tag 'Quand ? (AAAA-DD-MM HH:HH:HH)' %>
       <%= text_field_tag 'start_date'%>
-      <br /> <br /> 
+      <br/>
 
-      <%= label_tag 'Durée :' %>
+      <%= label_tag 'Durée (en min) :' %>
       <%= text_field_tag 'duration'%>
       <br/>
+
       <%= label_tag 'Où ?' %>
       <%= text_field_tag 'location'%>
-
-      <br /> <br /> 
-      <%= submit_tag "C'est parti !'" %>
+      <br/>
+      <br/>
+      <%= submit_tag "C'est parti !", class: 'btn btn-info btn-submit' %>
+      <br/>
 
     <% end %>
   </div>

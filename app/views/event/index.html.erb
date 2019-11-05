@@ -21,7 +21,7 @@
       <div class="row justify-content-between align-self-center mx-3">
       	<p><%=event.description%></p>
       	<p>Prix : <%=event.price%>
-      	<a class="btn btn-info" <%= link_to "Voir", event_index_path%></a>
+      	<a class="btn btn-info" <%= link_to "Voir", event_path(event.id)%></a>
       </div>
       </footer>
     </blockquote>
