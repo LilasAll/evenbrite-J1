@@ -1,1 +1,33 @@
-<h1>Bonjour sur la page d'acceuil!</h1>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4 text-light">Evenbrite 2.0 : Organisateur d'Events</h1>
+    <p class="lead text-light">Le site numéro 1 pour créer, organiser des événements et rencontrer de nouvelles personnes.<br/></p>
+  </div>
+</div>
+
+<section>
+<div class="card-deck">
+<%Event.all.each do |event|%>
+<div class="col-sm-3 mb-3">
+<div class="card">
+  <div class="card-header text-center font-weight-bold bg-info text-light">
+    <%=event.title%>
+  </div>
+  <div class="card-body align-center">
+    <blockquote class="blockquote mb-0">
+      <p><%=event.location%></p>
+      <footer class="blockquote-footer">
+      <div class="row justify-content-between align-self-center mx-3">
+      	<p><%=event.description%></p>
+      	<p>Prix : <%=event.price%>
+      	<a class="btn btn-info" <%= link_to "Voir", event_index_path%></a>
+      </div>
+      </footer>
+    </blockquote>
+  </div>
+</div>
+</div>
+<%end%>
+</div>
+</section>
