@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+#Mes gems ajoutées :
+gem 'devise'
 gem 'faker'
 gem 'table_print'
 gem 'dotenv-rails'
