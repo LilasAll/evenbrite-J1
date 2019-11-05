@@ -1,5 +1,10 @@
 <center>
-<h1>Le profil de : (#) </h1>
+<h1>Le profil de : <%= current_user.email %> </h1>
 	<br/>
+	  <div class="card-body">
+    <h5><strong>Membre depuis le : </strong><%= current_user.created_at %><br/>
+    <strong>Email : </strong><%= current_user.email %><br/>
+  </div>
+
 	<a class="btn btn-info" <%= link_to "Editer mon profil", edit_user_registration_path %></a>
 </center>

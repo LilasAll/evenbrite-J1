@@ -29,7 +29,7 @@
   <header>
   <!-- Navbar Bootstrap -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Acceuil</a>
+    <a class="navbar-brand" <%= link_to "Acceuil", event_index_path%></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -44,17 +44,18 @@
           <a class="nav-link" href="#">Link</a>
         </li> -->
 
-        <!-- Dropdown inscription/connexion -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            S'inscrire/Se connecter
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" <%= link_to "S'inscrire", new_user_registration_path%></a>
-            <a class="dropdown-item" <%= link_to "Se connecter", new_user_session_path%></a>
-          </div>
-        </li>
-
+        <% if current_user == nil %>
+          <!-- Dropdown inscription/connexion -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              S'inscrire/Se connecter
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" <%= link_to "S'inscrire", new_user_registration_path%></a>
+              <a class="dropdown-item" <%= link_to "Se connecter", new_user_session_path%></a>
+            </div>
+          </li>
+        <% else %>
         <!-- Dropdown utilisateur connecté -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -65,6 +66,7 @@
             <a class="dropdown-item" <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %></a>
           </div>
         </li>
+        <% end %>
       </ul>
 
     </div>

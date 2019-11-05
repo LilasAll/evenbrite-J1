@@ -5,12 +5,12 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :'Rentre ton email ci-dessous :' %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
-
+  <br/>
   <div class="actions">
-    <%= f.submit "Demander nouveau mot de passe" %>
+    <input type="submit" class="btn btn-info" value="Demander nouveau mot de passe">
   </div>
 <% end %>
 
