@@ -1,24 +1,13 @@
-# README
+<h1>README</h1>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<p>Cette application fonctionne grâce à : <br/> 
+Ruby version 2.5.1 <br/> 
+ <br/> 
+Pour lancer l'application :  <br/> 
+	$ bundle install <br/> 
+	$ rails db:migrate <br/> 
+	$ rails db:seed <br/> 
+Puis aller sur le lien suivant : http://localhost:3000/ <br/> 
+ <br/> 
+Sinon via le lien heroku suivant: https://evenbritenew.herokuapp.com/
+</p>
