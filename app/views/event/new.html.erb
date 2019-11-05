@@ -1,0 +1,32 @@
+<center>
+<h1> Créer un nouvel événement : </h1>
+<div style="margin: 5%;" >
+    <%= form_tag url_for(action: 'create'), method: "post" do %>
+    <div style="";color: white;" >
+      <%= label_tag 'Titre de ton Event : ' %>
+      <%= text_field_tag 'title'%>
+      <br /> 
+      <%= label_tag 'Description' %>
+      <%= text_field_tag 'description'%>
+      <br /> 
+    
+        <%= label_tag 'Prix (en €) :' %>
+      <%= text_field_tag 'price'%>
+      <br /> 
+        <%= label_tag 'Quand ? ' %>
+      <%= text_field_tag 'start_date'%>
+      <br /> <br /> 
+
+      <%= label_tag 'Durée :' %>
+      <%= text_field_tag 'duration'%>
+      <br/>
+      <%= label_tag 'Où ?' %>
+      <%= text_field_tag 'location'%>
+
+      <br /> <br /> 
+      <%= submit_tag "C'est parti !'" %>
+
+    <% end %>
+  </div>
+</div>
+</center>

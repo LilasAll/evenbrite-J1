@@ -2,7 +2,7 @@
 
 <center>
 <h2>Bonjour <%=@user.first_name%><%=@user.last_name%><br/></h2>   
-<h2>Editer ton mot de passe :</h2>
+<h2>Editer ton profil :</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
