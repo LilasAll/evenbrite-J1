@@ -6,11 +6,21 @@
   <div class="card-body">
     <h5><strong>Date de l'événement : </strong><%= @event.start_date %><br/>
     <strong>Description : </strong><%= @event.description %><br/>
-    <strong>Administateur : </strong><%= @event.admin.first_name %><br/>
+    <strong>Créateur : </strong><%= @event.admin.first_name %><br/>
     <strong>Prix en € : </strong> <%= @event.price %><br/>
     <strong>Durée en min : </strong><%=  @event.duration %><br/><h5>
     <br/>
-    <strong>Contacter l'administrateur : </strong><%= @event.admin.email %><br/>
+    <strong>Contacter le créateur : </strong><%= @event.admin.email %><br/>
   </div>
+
+  <center>
+  <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h2 class="card-title">Inscription à l'event</h2>
+    <a class="btn btn-secondary" <%= link_to "M'inscrire", new_charge_path %></a>
+  </div>
+  </div>
+  </center>
+  <br/>
 
 </div>
